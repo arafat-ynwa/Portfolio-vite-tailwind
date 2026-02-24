@@ -1,8 +1,8 @@
-import Navbar from "./components/Navbar";
+import Navbar from './features/common/Navbar'
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
-import Footer from "./components/Footer";
+import Footer from "./features/common/Footer";
 import Form from "./features/form/Form";
 
 function App() {

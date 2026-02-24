@@ -1,76 +1,92 @@
 import {
   DiHtml5,
   DiCss3,
-  DiSass,
   DiBootstrap,
-  DiJavascript1,
   DiReact,
   DiNodejsSmall,
   DiMongodb,
   DiGithubBadge,
 } from "react-icons/di";
-import Reveal from "./Reveal";
-
+import { SiJavascript } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiExpress } from "react-icons/si";
+import Reveal from "../features/common/Reveal";
+import { SiRedux } from "react-icons/si";
+import { SiPostman } from "react-icons/si";
+import ShinyEffect from "../features/common/ShinyEffect";
 const skills = [
   {
     category: "Frontend",
     technologies: [
-      { name: "HTML", icon: <DiHtml5 className="text-orange-600" /> },
-      { name: "CSS", icon: <DiCss3 className="text-blue-600" /> },
-      { name: "Sass", icon: <DiSass className="text-pink-600" /> },
-      { name: "Bootstrap", icon: <DiBootstrap className="text-purple-600" /> },
+      { name: "HTML", icon: <DiHtml5 className="text-orange-500" /> },
+      { name: "CSS", icon: <DiCss3 className="text-blue-500" /> },
+      {
+        name: "Tailwind",
+        icon: <RiTailwindCssFill className="text-cyan-500" />,
+      },
+      { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
+
       {
         name: "JavaScript",
-        icon: <DiJavascript1 className="text-yellow-500" />,
+        icon: <SiJavascript className="text-yellow-400" />,
       },
-      { name: "React", icon: <DiReact className="text-blue-500" /> },
+      { name: "React", icon: <DiReact className="text-cyan-400" /> },
     ],
   },
   {
     category: "Fullstack",
     technologies: [
-      { name: "Node Js", icon: <DiNodejsSmall className="text-green-500" /> },
+      { name: "Node.js", icon: <DiNodejsSmall className="text-green-500" /> },
+      { name: "Express.js", icon: <SiExpress className="text-green-500" /> },
       { name: "MongoDB", icon: <DiMongodb className="text-green-600" /> },
-      { name: "React", icon: <DiReact className="text-blue-500" /> },
-      { name: "GitHub", icon: <DiGithubBadge className="text-gray-600" /> },
+      { name: "React", icon: <DiReact className="text-cyan-400" /> },
+      { name: "GitHub", icon: <DiGithubBadge className="text-gray-400" /> },
+      { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+
     ],
   },
 ];
 
 const Skills = () => {
   return (
-    <div
-      className="max-w-[650px] mx-auto flex flex-col justify-center px-4 text-gray-200 pb-8 md:py-12"
+    <section
       id="skills"
+      className="max-w-5xl mx-auto px-6 py-20 text-gray-100 flex flex-col md:flex-row justify-center items-center"
     >
-      <Reveal>
-        <h2 className="text-3xl font-bold mb-4 text-center">Skills</h2>
-        <p className="text-center mb-8">
-          I worked on various frontend and fullstack projects. Check them{" "}
-          <a href="#" className="underline">
-            there
-          </a>
-          .
-        </p>
+      <ShinyEffect top={800} left={500} size={900} />
 
-        <div
-          className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8
-                        "
-        >
+
+      <Reveal>
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-semibold tracking-tight mb-4">Skills</h2>
+          <p className="text-gray-400 max-w-xl mx-auto">
+            Technologies I use to build modern, scalable web applications.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="border border-purple-900 p-6 rounded-lg bg-purple-900/20 shadow-lg 
-                                w-full md:w-1/2"
+              className="p-8 rounded-2xl border border-white/10 
+                         bg-white/5 backdrop-blur-sm
+                         hover:border-white/20 hover:bg-white/10
+                         transition-all duration-300"
             >
-              <h3 className="text-xl font-bold mb-4 text-center">
+              <h3 className="text-xl font-medium mb-6 text-white">
                 {skill.category}
               </h3>
-              <div className="grid grid-cols-2 gap-4">
+
+              <div className="grid grid-cols-2 gap-6">
                 {skill.technologies.map((tech, idx) => (
-                  <div key={idx} className="flex items-center space-x-2">
+                  <div
+                    key={idx}
+                    className="flex items-center space-x-3 
+                               text-gray-300 hover:text-white 
+                               transition-colors duration-200"
+                  >
                     <span className="text-2xl">{tech.icon}</span>
-                    <span>{tech.name}</span>
+                    <span className="text-sm">{tech.name}</span>
                   </div>
                 ))}
               </div>
@@ -78,7 +94,7 @@ const Skills = () => {
           ))}
         </div>
       </Reveal>
-    </div>
+    </section>
   );
 };
 
