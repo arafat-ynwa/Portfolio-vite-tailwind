@@ -53,7 +53,7 @@ const Skills = () => {
       id="skills"
       className="max-w-5xl mx-auto px-6 py-20 text-gray-100 flex flex-col md:flex-row justify-center items-center"
     >
-      <ShinyEffect top={800} left={500} size={900} />
+      {/* <ShinyEffect top={800} left={500} size={900} /> */}
 
 
       <Reveal>

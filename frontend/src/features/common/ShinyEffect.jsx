@@ -1,5 +1,5 @@
 
-function ShinyEffect({ left, right, top, size = 500 }) {
+function ShinyEffect({ left, right, top, size }) {
   const positionStyles = {
     top: `${top}px`,
     width: `${size}px`,

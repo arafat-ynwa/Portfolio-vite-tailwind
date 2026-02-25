@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <section className="relative w-full max-w-dvw min-h-screen  text-white flex items-center justify-center mt-32 md:mt-6 overflow-hidden">
       {/* Shiny Orbs */}
-      <ShinyEffect top={50} left={-100} size={600} />
-      <ShinyEffect top={200} right={-150} size={500} />
+      {/* <ShinyEffect top={50} left={-100} size={600} /> */}
+      {/* <ShinyEffect top={200} right={-150} size={500} /> */}
 
       <Reveal>
         <div className=" max-w-7xl mx-auto md:px-12 grid md:grid-cols-2 gap-12 items-center py-10 px-10">
