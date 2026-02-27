@@ -1,13 +1,13 @@
 import { TypeAnimation } from "react-type-animation";
 import Reveal from "../features/common/Reveal";
 import ShinyEffect from "../features/common/ShinyEffect";
+import Screenshot_1 from "../assets/Screenshot_1.png";
 
 const Hero = () => {
   return (
-    <section className="relative w-full max-w-dvw min-h-screen  text-white flex items-center justify-center mt-32 md:mt-6 overflow-hidden">
+    <section className="relative w-full min-h-screen  text-white flex items-center justify-center mt-32 md:mt-6 overflow-hidden">
       {/* Shiny Orbs */}
-      {/* <ShinyEffect top={50} left={-100} size={600} /> */}
-      {/* <ShinyEffect top={200} right={-150} size={500} /> */}
+      <ShinyEffect left={5} size={600} maxWidth={600} />
 
       <Reveal>
         <div className=" max-w-7xl mx-auto md:px-12 grid md:grid-cols-2 gap-12 items-center py-10 px-10">
@@ -51,8 +51,11 @@ const Hero = () => {
           {/* RIGHT SIDE (Profile Image / Illustration) */}
           <div className="flex justify-center">
             <div className="w-72 h-72 md:w-96 md:h-96 rounded-full shadow-2xl">
-              <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-gray-600 text-xl">
-                Your Image Here
+              <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-gray-600 text-xl overflow-hidden">
+                <img
+                  src={Screenshot_1}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                />
               </div>
             </div>
           </div>

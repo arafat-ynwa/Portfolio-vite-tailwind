@@ -36,10 +36,11 @@ function Form() {
 
   return (
     <section
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-20 "
+      className="relative overflow-hidden min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-20 "
       id="contact"
     > {/* Heading */}
-      {/* <ShinyEffect top={1600} left={40} size={1200} /> */}
+      <ShinyEffect left={10} size={600} maxWidth={600} />
+
 
         <div className="text-center mb-8 px-6 py-20">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
