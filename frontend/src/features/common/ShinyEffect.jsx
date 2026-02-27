@@ -3,7 +3,7 @@ function ShinyEffect({ left, right, top, size, maxWidth }) {
   const positionStyles = {
     position: "absolute",
     borderRadius: '50%',
-    background: "radial-gradient(circle, rgba(29, 53, 113, 0.2), transparent 70%)",
+    background: "radial-gradient(circle, rgba(33, 60, 129, 0.903), transparent 70%)",
     top: `${top}px`,
     width: `${size}vw`,
     maxWidth: `${maxWidth}px`,

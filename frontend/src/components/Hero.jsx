@@ -28,7 +28,7 @@ const Hero = () => {
               ]}
               speed={50}
               repeat={Infinity}
-              className="text-2xl md:text-3xl font-semibold text-blue-400"
+              className="text-2xl md:text-3xl font-semibold text-[#1E2839]"
             />
 
             <p className="text-gray-400 max-w-lg">
@@ -38,19 +38,19 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex gap-4 pt-4">
-              <button className="px-6 py-3 border border-gray-500 hover:border-blue-400 hover:text-blue-400 transition rounded-lg font-medium">
+              <button className="px-6 py-3 border border-gray-500 hover:border-[#1E2839] hover:text-[#1E2839] transition rounded-lg font-medium cursor-pointer">
                 View Projects
               </button>
 
-              <button className="px-6 py-3 border border-gray-500 hover:border-blue-400 hover:text-blue-400 transition rounded-lg font-medium">
+              <button className="px-6 py-3 border border-gray-500 hover:border-[#1E2839] hover:text-[#1E2839] transition rounded-lg font-medium cursor-pointer">
                 Contact Me
               </button>
             </div>
           </div>
 
           {/* RIGHT SIDE (Profile Image / Illustration) */}
-          <div className="flex justify-center">
-            <div className="w-72 h-72 md:w-96 md:h-96 rounded-full shadow-2xl">
+          <div className="flex justify-center lg:justify-end">
+            <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full shadow-2xl">
               <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-gray-600 text-xl overflow-hidden">
                 <img
                   src={Screenshot_1}
