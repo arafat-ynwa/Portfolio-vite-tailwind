@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
+import ShinyEffect from './ShinyEffect'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
@@ -49,18 +50,20 @@ const Navbar = () => {
                 {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
             </div>
 
+
             <motion.div
             initial={false}
             animate={nav ? 'open' : 'closed'}
             variants={menuVariants}
-            className='fixed left-0 top-0 w-full min-h-screen bg-[#43548B] z-40'
+            className='fixed left-0 top-0 w-full min-h-screen bg-[#4F506F] z-40'
             >
-                <ul className='font-semibold text-4xl space-y-8 mt-24 text-center'>
-                    <li><Link to="skills" onClick={closeNav} smooth={true} offset={50} duration={500}>About</Link></li>
-                    <li><Link to="portfolio" onClick={closeNav} smooth={true} offset={50} duration={500}>Portfolio</Link></li>
+                <ul className='text-4xl space-y-8 mt-24 text-center'>
+                    <li><Link to="skills" onClick={closeNav} smooth={true} offset={50} duration={500}>Projects</Link></li>
                     <li><Link to="contact" onClick={closeNav} smooth={true} offset={50} duration={500}>Contact</Link></li>
+                    <li><Link to="portfolio" onClick={closeNav} smooth={true} offset={50} duration={500}>Resume</Link></li>
                 </ul>
-
+                <ShinyEffect left={5} size={600} maxWidth={600} />
+                
 
             </motion.div>
 

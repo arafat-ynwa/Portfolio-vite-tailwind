@@ -61,40 +61,40 @@ function Form() {
         <form onSubmit={handleSubmit} className="space-y-6">
           
           <div>
-            <label className="text-sm text-gray-400">Name</label>
+            <label htmlFor="name" className="text-sm text-gray-400">Name</label>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              required
               placeholder="Your Name"
-              className="w-full mt-2 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              className="w-full mt-2 px-4 py-3 rounded-lg border border-gray-700 text-white focus:outline-none transition "
+              id="name"
             />
           </div>
 
           <div>
-            <label className="text-sm text-gray-400">Email</label>
+            <label htmlFor="email" className="text-sm text-gray-400">Email</label>
             <input
               type="text"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              required
               placeholder="email@example.com"
-              className="w-full mt-2 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              className="w-full mt-2 px-4 py-3 rounded-lg border border-gray-700 text-white focus:outline-none  transition"
+              id="email"
             />
           </div>
 
           <div>
-            <label className="text-sm text-gray-400">Message</label>
+            <label htmlFor="text" className="text-sm text-gray-400">Message</label>
             <textarea
               name="text"
               value={formData.text}
               onChange={handleChange}
-              required
               placeholder="Tell me about your project..."
-              className="w-full mt-2 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition resize-none h-32"
+              className="w-full mt-2 px-4 py-3 rounded-lg border border-gray-700 text-white focus:outline-none  transition resize-none h-32"
+              id="text"
             />
           </div>
 
