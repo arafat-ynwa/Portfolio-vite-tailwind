@@ -1,7 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import Reveal from "../features/common/Reveal";
 import ShinyEffect from "../features/common/ShinyEffect";
-import Screenshot_1 from "../assets/Screenshot_1.png";
+import Imagee from "../assets/Imagee.png";
 
 const Hero = () => {
   return (
@@ -50,10 +50,10 @@ const Hero = () => {
 
           {/* RIGHT SIDE (Profile Image / Illustration) */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full shadow-2xl">
-              <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-gray-600 text-xl overflow-hidden">
+            <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full shadow-2xl border border-gray-400">
+              <div className="w-full h-full rounded-full  flex items-center justify-center text-gray-600 text-xl overflow-hidden">
                 <img
-                  src={Screenshot_1}
+                  src={Imagee}
                   className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                 />
               </div>
