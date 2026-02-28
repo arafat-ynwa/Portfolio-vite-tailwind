@@ -76,7 +76,7 @@ function Form() {
           <div>
             <label htmlFor="email" className="text-sm text-gray-400">Email</label>
             <input
-              type="text"
+              type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
@@ -104,8 +104,8 @@ function Form() {
             className={`w-full py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition duration-300
               ${
                 status === "loading"
-                  ? "bg-gray-700 cursor-not-allowed"
-                  : "bg-blue-600 hover:bg-blue-500 shadow-lg"
+                  ? "bg-gray-400 cursor-not-allowed text-white border border-gray-400"
+                  : "bg-blue-600 hover:bg-blue-700 shadow-lg"
               }`}
           >
             {status === "loading" ? (
